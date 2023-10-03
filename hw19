@@ -1,0 +1,30 @@
+class Car:
+    car_instances = []
+
+    def __init__(self, producer, brand, year=2020, load_capacity: float = 0.0):
+        self.producer = producer
+        self.speedometr = 0
+        self.brand = brand
+        self.year = year
+        self.load_capacity = load_capacity
+        with open("car_information.csv", "a") as csv_file:
+            csv_file.write('lalala')
+
+    def __str__(self):
+        return f'Car {self.producer}'
+
+    __repr__ = __str__
+
+class sportcar:
+    def __init__(self, producer, brand, year=2020):
+        self.producer = producer
+        self.speedometr = 0
+        self.brand = brand
+        self.year = year
+
+
+toyota = Car('toyota', 'Camry', 2021, 8.0)
+volkswagen = Car('volkswagen', 'lamborghini')
+bmw = Car('bmw', 'rolls-royce ', 2019, 4.0)
+carsport = sportcar('bentli', 'Lalal', 2009, 9.0)
+mazda = sportcar('mazda', 'lslsdk', 2014)
